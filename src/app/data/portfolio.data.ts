@@ -74,7 +74,7 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
     client: 'Vogue Magazine',
     location: 'New York City, USA',
     description: 'An edgy fashion editorial shot in the heart of Manhattan, exploring the intersection of light and shadow.',
-    image: 'https://images.unsplash.com/photo-1445205170230-053b830c6050?q=80&w=1200'
+    image: 'asset/PHANTOMPHOTON/IMG_0817.JPG'
   },
   {
     id: 3,
@@ -83,7 +83,7 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
     client: 'National Geographic',
     location: 'Himalayas, Nepal',
     description: 'A visual journey through the highest mountains on Earth, documenting the resilient spirit of the Sherpa people.',
-    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200'
+    image: 'asset/PHANTOMPHOTON/IMG_4764.JPG'
   }
 ];
 
