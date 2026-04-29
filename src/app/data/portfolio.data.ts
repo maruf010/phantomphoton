@@ -46,15 +46,40 @@ export const SERVICES: Service[] = [
 ];
 
 export const GALLERY: GalleryItem[] = [
-  { id: 1, url: 'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=800', category: 'Wedding', title: 'The Vows' },
-  { id: 2, url: 'https://images.unsplash.com/photo-1532635241-17e820acc59f?q=80&w=800', category: 'Fashion', title: 'Modern Elegance' },
-  { id: 3, url: 'https://images.unsplash.com/photo-1504813184591-01592fd03cf7?q=80&w=800', category: 'Portrait', title: 'Deep Soul' },
-  { id: 4, url: 'https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=800', category: 'Event', title: 'Gala Night' },
-  { id: 5, url: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=800', category: 'Product', title: 'Sonic Wave' },
-  { id: 6, url: 'https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800', category: 'Fashion', title: 'Urban Chic' },
-  { id: 7, url: 'https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=800', category: 'Wedding', title: 'First Dance' },
-  { id: 8, url: 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=800', category: 'Portrait', title: 'Aged Grace' },
-  { id: 9, url: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=800', category: 'Event', title: 'Techno Pulse' },
+  // Wedding
+  { id: 1, url: 'asset/PHANTOMPHOTON/IMG_4763.JPG', category: 'Wedding', title: 'Eternal Vows' },
+  { id: 2, url: 'asset/PHANTOMPHOTON/IMG_4764.JPG', category: 'Wedding', title: 'Golden Hour Couple' },
+  { id: 3, url: 'asset/PHANTOMPHOTON/IMG_4767 (1).JPG', category: 'Wedding', title: 'The Celebration' },
+  
+  // Portrait
+  { id: 4, url: 'asset/PHANTOMPHOTON/IMG_0817.JPG', category: 'Portrait', title: 'Serene Gaze' },
+  { id: 5, url: 'asset/PHANTOMPHOTON/IMG_0819.JPG', category: 'Portrait', title: 'Urban Soul' },
+  { id: 6, url: 'asset/PHANTOMPHOTON/IMG_0904.JPG', category: 'Portrait', title: 'Light & Shadow' },
+  { id: 7, url: 'asset/PHANTOMPHOTON/IMG_1035.JPG', category: 'Portrait', title: 'Expressionism' },
+
+  // Event
+  { id: 8, url: 'asset/PHANTOMPHOTON/IMG_1402 (2).JPG', category: 'Event', title: 'Gala Night' },
+  { id: 9, url: 'asset/PHANTOMPHOTON/IMG_1410.JPG', category: 'Event', title: 'The Performance' },
+  { id: 10, url: 'asset/PHANTOMPHOTON/IMG_1418.JPG', category: 'Event', title: 'Crowd Energy' },
+  { id: 11, url: 'asset/PHANTOMPHOTON/IMG_1456.JPG', category: 'Event', title: 'Backstage Magic' },
+
+  // Fashion
+  { id: 12, url: 'asset/PHANTOMPHOTON/IMG_0368.JPG', category: 'Fashion', title: 'Vogue Editorial' },
+  { id: 13, url: 'asset/PHANTOMPHOTON/IMG_1081.JPG', category: 'Fashion', title: 'High Street' },
+  { id: 14, url: 'asset/PHANTOMPHOTON/IMG_1091.JPG', category: 'Fashion', title: 'Minimalist Chic' },
+  { id: 15, url: 'asset/PHANTOMPHOTON/IMG_1117 (1).JPG', category: 'Fashion', title: 'Summer Collection' },
+
+  // Product
+  { id: 16, url: 'asset/PHANTOMPHOTON/IMG_0502.JPG', category: 'Product', title: 'Tech Detail' },
+  { id: 17, url: 'asset/PHANTOMPHOTON/IMG_0562.JPG', category: 'Product', title: 'Commercial Shot' },
+  { id: 18, url: 'asset/PHANTOMPHOTON/IMG_1222.JPG', category: 'Product', title: 'Product Macro' },
+  { id: 19, url: 'asset/PHANTOMPHOTON/masterpieces.png', category: 'Product', title: 'Branding Vision' },
+
+  // Travel
+  { id: 20, url: 'asset/PHANTOMPHOTON/IMG_0726.JPG', category: 'Travel', title: 'Mountain Escape' },
+  { id: 21, url: 'asset/PHANTOMPHOTON/IMG_0734.JPG', category: 'Travel', title: 'Lakeside Peace' },
+  { id: 22, url: 'asset/PHANTOMPHOTON/IMG_2855.JPG', category: 'Travel', title: 'Road Journey' },
+  { id: 23, url: 'asset/PHANTOMPHOTON/Junayed_Hasan__Bluish_Twilight__MobilePhotography.jpeg', category: 'Travel', title: 'Bluish Twilight' },
 ];
 
 export const FEATURED_PROJECTS: FeaturedProject[] = [
@@ -65,7 +90,7 @@ export const FEATURED_PROJECTS: FeaturedProject[] = [
     client: 'The Andersons',
     location: 'Santorini, Greece',
     description: 'A dreamy sunset wedding on the cliffs of Santorini, capturing the raw emotions and breathtaking views.',
-    image: 'https://images.unsplash.com/photo-1583939003579-730e3918a45a?q=80&w=1200'
+    image: 'asset/PHANTOMPHOTON/masterpieces.png'
   },
   {
     id: 2,

@@ -12,7 +12,7 @@ import { GalleryItem } from '../../models/portfolio.model';
 })
 export class GalleryComponent {
   galleryItems = GALLERY;
-  categories: GalleryItem['category'][] = ['All', 'Wedding', 'Portrait', 'Event', 'Fashion', 'Product'];
+  categories: GalleryItem['category'][] = ['All', 'Wedding', 'Portrait', 'Event', 'Fashion', 'Product', 'Travel'];
   
   selectedCategory = signal<GalleryItem['category']>('All');
   

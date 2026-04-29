@@ -9,7 +9,7 @@ export interface Service {
 export interface GalleryItem {
   id: number;
   url: string;
-  category: 'Wedding' | 'Portrait' | 'Event' | 'Fashion' | 'Product' | 'All';
+  category: 'Wedding' | 'Portrait' | 'Event' | 'Fashion' | 'Product' | 'Travel' | 'All';
   title: string;
 }
 
