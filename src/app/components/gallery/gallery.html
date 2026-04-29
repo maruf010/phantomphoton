@@ -1,0 +1,52 @@
+<section class="gallery section-padding">
+  <div class="container">
+    <div class="section-title">
+      <span>Our Portfolio</span>
+      <h2>Frozen Moments In <span class="text-gradient">Time</span></h2>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+      @for (cat of categories; track cat) {
+        <button 
+          [class.active]="selectedCategory() === cat"
+          (click)="filterByCategory(cat)"
+        >
+          {{ cat }}
+        </button>
+      }
+    </div>
+
+    <!-- Masonry Grid -->
+    <div class="gallery-grid">
+      @for (item of filteredGallery(); track item.id) {
+        <div class="gallery-item" (click)="openLightbox(item)">
+          <img [src]="item.url" [alt]="item.title" loading="lazy">
+          <div class="item-overlay">
+            <div class="overlay-content">
+              <span>{{ item.category }}</span>
+              <h3>{{ item.title }}</h3>
+              <span class="material-icons">fullscreen</span>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  @if (selectedImage(); as img) {
+    <div class="lightbox" (click)="closeLightbox()">
+      <button class="close-btn" (click)="closeLightbox()">
+        <span class="material-icons">close</span>
+      </button>
+      <div class="lightbox-content" (click)="$event.stopPropagation()">
+        <img [src]="img.url" [alt]="img.title">
+        <div class="lightbox-info">
+          <span>{{ img.category }}</span>
+          <h2>{{ img.title }}</h2>
+        </div>
+      </div>
+    </div>
+  }
+</section>

@@ -1,0 +1,20 @@
+<section class="why-choose section-padding">
+  <div class="container">
+    <div class="section-title">
+      <span>Why Choose Us</span>
+      <h2>Elevating Your <span class="text-gradient">Visual Brand</span></h2>
+    </div>
+
+    <div class="points-grid">
+      @for (point of points; track point.title) {
+        <div class="point-item glass-card">
+          <div class="icon-circle">
+            <span class="material-icons">{{ point.icon }}</span>
+          </div>
+          <h3>{{ point.title }}</h3>
+          <p>{{ point.desc }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>

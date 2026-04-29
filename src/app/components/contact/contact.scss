@@ -1,0 +1,137 @@
+.contact {
+  background: var(--surface-color);
+
+  .grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 80px;
+
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+  }
+
+  .contact-info {
+    p { color: var(--text-secondary); margin-bottom: 40px; font-size: 1.1rem; }
+
+    .info-items {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-bottom: 40px;
+
+      .item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        span {
+          width: 50px;
+          height: 50px;
+          background: var(--glass-bg);
+          border: 1px solid var(--glass-border);
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--primary-color);
+        }
+
+        h4 { font-size: 1rem; margin-bottom: 5px; }
+        p { margin: 0; font-size: 0.9rem; color: var(--text-secondary); }
+      }
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+
+      .social-btn {
+        color: var(--text-primary);
+        text-decoration: none;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 10px 20px;
+        border: 1px solid var(--glass-border);
+        border-radius: 50px;
+        transition: var(--transition-smooth);
+
+        &:hover {
+          border-color: var(--primary-color);
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+
+  .contact-form-container {
+    padding: 50px;
+
+    @media (max-width: 576px) {
+      padding: 30px 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+
+      @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      label {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--text-primary);
+      }
+
+      input, select, textarea {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid var(--glass-border);
+        padding: 15px;
+        border-radius: 8px;
+        color: #fff;
+        font-family: inherit;
+        transition: var(--transition-smooth);
+
+        &:focus {
+          outline: none;
+          border-color: var(--primary-color);
+          background: rgba(255, 255, 255, 0.08);
+        }
+
+        &::placeholder { color: rgba(255,255,255,0.2); }
+      }
+
+      select option {
+        background: var(--surface-color);
+      }
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 18px;
+      font-size: 1rem;
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

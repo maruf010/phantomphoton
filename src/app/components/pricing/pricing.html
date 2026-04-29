@@ -1,0 +1,32 @@
+<section class="pricing section-padding">
+  <div class="container">
+    <div class="section-title">
+      <span>Investment</span>
+      <h2>Choose Your <span class="text-gradient">Package</span></h2>
+    </div>
+
+    <div class="pricing-grid">
+      @for (pkg of packages; track pkg.id) {
+        <div class="pricing-card" [class.popular]="pkg.isPopular">
+          @if (pkg.isPopular) {
+            <div class="popular-tag">Most Popular</div>
+          }
+          <div class="card-header">
+            <h3>{{ pkg.name }}</h3>
+            <div class="price">{{ pkg.price }}</div>
+          </div>
+          <ul class="features">
+            @for (feature of pkg.features; track feature) {
+              <li><span class="material-icons">check_circle</span> {{ feature }}</li>
+            }
+          </ul>
+          <div class="meta-info">
+            <span><strong>Duration:</strong> {{ pkg.duration }}</span>
+            <span><strong>Edited Photos:</strong> {{ pkg.photos }}</span>
+          </div>
+          <a href="#contact" [class]="pkg.isPopular ? 'btn-primary' : 'btn-outline'">Book Now</a>
+        </div>
+      }
+    </div>
+  </div>
+</section>

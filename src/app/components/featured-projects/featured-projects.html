@@ -1,0 +1,29 @@
+<section class="featured section-padding">
+  <div class="container">
+    <div class="section-title">
+      <span>Featured Work</span>
+      <h2>Exclusive <span class="text-gradient">Masterpieces</span></h2>
+    </div>
+
+    <div class="projects-list">
+      @for (project of projects; track project.id; let i = $index) {
+        <div class="project-card" [class.reverse]="i % 2 !== 0">
+          <div class="project-image">
+            <img [src]="project.image" [alt]="project.title">
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-info">
+            <span class="category">{{ project.category }}</span>
+            <h3>{{ project.title }}</h3>
+            <div class="meta">
+              <span><strong>Client:</strong> {{ project.client }}</span>
+              <span><strong>Location:</strong> {{ project.location }}</span>
+            </div>
+            <p>{{ project.description }}</p>
+            <a href="#contact" class="btn-outline">View Details</a>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

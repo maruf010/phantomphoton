@@ -1,0 +1,122 @@
+.testimonials {
+  background: var(--bg-color);
+  overflow: hidden;
+
+  .testimonial-slider {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    
+    .slider-track {
+      display: flex;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .slide {
+      min-width: 100%;
+      padding: 20px;
+    }
+  }
+
+  .testimonial-card {
+    padding: 50px;
+    text-align: center;
+    position: relative;
+
+    .quote-icon {
+      margin-bottom: 30px;
+      span {
+        font-size: 50px;
+        color: var(--primary-color);
+        opacity: 0.5;
+      }
+    }
+
+    .content {
+      font-size: 1.4rem;
+      font-style: italic;
+      color: #fff;
+      margin-bottom: 40px;
+      line-height: 1.6;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .client-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+
+      img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--primary-color);
+      }
+
+      .details {
+        text-align: left;
+        h4 { font-size: 1.1rem; margin-bottom: 5px; }
+        span { color: var(--text-secondary); font-size: 0.9rem; }
+        
+        .rating {
+          margin-top: 5px;
+          display: flex;
+          .star {
+            font-size: 16px;
+            color: rgba(255,255,255,0.1);
+            &.active { color: var(--primary-color); }
+          }
+        }
+      }
+    }
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+
+    .ctrl-btn {
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      color: #fff;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition-smooth);
+
+      &:hover {
+        background: var(--primary-color);
+        color: #000;
+      }
+    }
+
+    .dots {
+      display: flex;
+      gap: 10px;
+      
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--glass-border);
+        cursor: pointer;
+        transition: var(--transition-smooth);
+        
+        &.active {
+          background: var(--primary-color);
+          width: 30px;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+<section class="testimonials section-padding">
+  <div class="container">
+    <div class="section-title">
+      <span>Testimonials</span>
+      <h2>What Our <span class="text-gradient">Clients Say</span></h2>
+    </div>
+
+    <div class="testimonial-slider">
+      <div class="slider-track" [style.transform]="'translateX(-' + currentIndex() * 100 + '%)'">
+        @for (item of testimonials; track item.id) {
+          <div class="slide">
+            <div class="testimonial-card glass-card">
+              <div class="quote-icon">
+                <span class="material-icons">format_quote</span>
+              </div>
+              <p class="content">"{{ item.content }}"</p>
+              <div class="client-info">
+                <img [src]="item.image" [alt]="item.name">
+                <div class="details">
+                  <h4>{{ item.name }}</h4>
+                  <span>{{ item.role }}</span>
+                  <div class="rating">
+                    @for (star of [1,2,3,4,5]; track star) {
+                      <span class="material-icons star" [class.active]="star <= item.rating">star</span>
+                    }
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+
+      <!-- Controls -->
+      <div class="controls">
+        <button (click)="prev()" class="ctrl-btn"><span class="material-icons">arrow_back</span></button>
+        <div class="dots">
+          @for (item of testimonials; track item.id; let i = $index) {
+            <span class="dot" [class.active]="i === currentIndex()" (click)="setIndex(i)"></span>
+          }
+        </div>
+        <button (click)="next()" class="ctrl-btn"><span class="material-icons">arrow_forward</span></button>
+      </div>
+    </div>
+  </div>
+</section>

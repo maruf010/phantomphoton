@@ -1,0 +1,24 @@
+<section class="faq section-padding">
+  <div class="container">
+    <div class="section-title">
+      <span>Information</span>
+      <h2>Frequently Asked <span class="text-gradient">Questions</span></h2>
+    </div>
+
+    <div class="faq-list">
+      @for (faq of faqs; track faq.id) {
+        <div class="faq-item" [class.open]="openId() === faq.id">
+          <div class="faq-question" (click)="toggle(faq.id)">
+            <h3>{{ faq.question }}</h3>
+            <span class="material-icons toggle-icon">
+              {{ openId() === faq.id ? 'remove' : 'add' }}
+            </span>
+          </div>
+          <div class="faq-answer">
+            <p>{{ faq.answer }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

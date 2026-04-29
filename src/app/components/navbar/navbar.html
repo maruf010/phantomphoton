@@ -1,0 +1,32 @@
+<nav class="navbar" [class.scrolled]="isScrolled()">
+  <div class="nav-container">
+    <a href="#home" class="logo">
+      LUMINA<span>STUDIOS</span>
+    </a>
+
+    <!-- Desktop Menu -->
+    <ul class="nav-links">
+      @for (link of navLinks; track link.name) {
+        <li><a [href]="link.path">{{ link.name }}</a></li>
+      }
+      <li><a href="#contact" class="btn-primary">Book Now</a></li>
+    </ul>
+
+    <!-- Mobile Toggle -->
+    <button class="mobile-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu" [class.open]="isMenuOpen()">
+    <ul>
+      @for (link of navLinks; track link.name) {
+        <li><a [href]="link.path" (click)="closeMenu()">{{ link.name }}</a></li>
+      }
+      <li><a href="#contact" class="btn-primary" (click)="closeMenu()">Book Now</a></li>
+    </ul>
+  </div>
+</nav>
